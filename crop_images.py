@@ -40,7 +40,7 @@ image_list = []
 for filename in cropped_files:
   filepath = os.path.join(cropped_folder, filename)
   image = Image.open(filepath)
-  # PDF保存のためにRGBモードに変換
+  # PDF保存のためにRGBモードに変換。RGBモードのことは要勉強。
   if image.mode != 'RGB':
       image = image.convert('RGB')
   image_list.append(image)
